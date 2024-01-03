@@ -3,4 +3,3 @@
 import helloUser from '../src/cli.js';
 
 helloUser();
-
