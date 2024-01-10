@@ -5,8 +5,8 @@ const currentGameTutorial = 'What is the result of the expression?';
 const mathSigns = ['+', '-', '*'];
 
 export const getGameQuestionAndRightAnswer = () => {
-  const firstNumber = getRandomNumber(0, 500);
-  const secondNumber = getRandomNumber(0, 500);
+  const firstNumber = getRandomNumber(0, 10);
+  const secondNumber = getRandomNumber(0, 10);
   const mathSign = mathSigns[getRandomNumber(0, mathSigns.length - 1)];
   const gameQuestion = `${firstNumber} ${mathSign} ${secondNumber}`;
 
