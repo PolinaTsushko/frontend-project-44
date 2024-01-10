@@ -1,4 +1,4 @@
-import playGame, { getRandomNumber } from './index.js';
+import playGame, { getRandomNumber } from '../index.js';
 
 const currentGameTutorial = 'What is the result of the expression?';
 

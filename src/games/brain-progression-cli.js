@@ -1,4 +1,4 @@
-import playGame, { getRandomNumber } from './index.js';
+import playGame, { getRandomNumber } from '../index.js';
 
 const currentGameTutorial = 'What number is missing in the progression?';
 

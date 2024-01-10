@@ -1,4 +1,4 @@
-import playGame, { getRandomNumber } from './index.js';
+import playGame, { getRandomNumber } from '../index.js';
 
 const currentGameTutorial = 'Answer "yes" if the number is even, otherwise answer "no".';
 

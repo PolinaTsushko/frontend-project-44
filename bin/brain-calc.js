@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import getCalculationResult from '../src/brain-calc-cli.js';
+import getCalculationResult from '../src/games/brain-calc-cli.js';
 
 getCalculationResult();
