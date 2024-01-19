@@ -23,7 +23,7 @@ const getGameInfo = () => {
   const answer = String(arrayOfNumbers[randomElement]);
   arrayOfNumbers[randomElement] = '..';
 
-  const question = arrayOfNumbers.join(' ');
+  const question = String(arrayOfNumbers.join(' '));
 
   return [question, answer];
 };
