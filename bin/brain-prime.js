@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import isPrimeNumber from '../src/games/brain-prime-cli.js';
+import getGameInfo from '../src/games/brain-prime-cli.js';
 
-isPrimeNumber();
+getGameInfo();

@@ -9,7 +9,7 @@ const PROGRESSION_STEP = 2;
 const generateRandomProgression = () => {
   const firstElementOfProgression = getRandomNumber(1, 5);
   const arrayOfNumbers = [];
-  const randomElement = getRandomNumber(0, PROGRESSION_LENGTH - 1);
+  const randomElement = getRandomNumber(0, PROGRESSION_LENGTH);
 
   for (let i = 0; i < PROGRESSION_LENGTH; i += 1) {
     arrayOfNumbers.push(firstElementOfProgression + i * PROGRESSION_STEP);
