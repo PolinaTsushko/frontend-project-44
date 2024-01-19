@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import isEvenNumber from '../src/games/brain-even-cli.js';
+import getGameInfo from '../src/games/brain-even-cli.js';
 
-isEvenNumber();
+getGameInfo();

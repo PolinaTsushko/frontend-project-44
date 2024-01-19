@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import getHiddenElementofProgression from '../src/games/brain-progression-cli.js';
+import getGameInfo from '../src/games/brain-progression-cli.js';
 
-getHiddenElementofProgression();
+getGameInfo();
