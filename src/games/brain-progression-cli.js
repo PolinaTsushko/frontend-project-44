@@ -1,24 +1,24 @@
 import playGame from '../index.js';
 import getRandomNumber from '../utils.js';
 
-const currentGameTutorial = 'What number is missing in the progression?';
+const gameDescription = 'What number is missing in the progression?';
 
-export const getGameQuestionAndRightAnswer = () => {
-  const arrayLength = 10;
+export const getGameInfo = () => {
+  const ARRAY_LENGTH = 10;
   const array = [];
   const firstElementOfArray = getRandomNumber(1, 50);
-  const stepOfProgression = 2;
+  const PROGRESSION_STEP = 2;
 
-  for (let i = 0; i < arrayLength; i += 1) {
-    array.push(firstElementOfArray + i * stepOfProgression);
+  for (let i = 0; i < ARRAY_LENGTH; i += 1) {
+    array.push(firstElementOfArray + i * PROGRESSION_STEP);
   }
 
-  const hiddenElement = getRandomNumber(0, arrayLength - 1);
-  const rightAnswer = String(array[hiddenElement]);
+  const hiddenElement = getRandomNumber(0, ARRAY_LENGTH - 1);
+  const answer = String(array[hiddenElement]);
   array[hiddenElement] = '..';
-  const gameQuestion = array.join(' ');
+  const question = array.join(' ');
 
-  return [gameQuestion, rightAnswer];
+  return [question, answer];
 };
 
-export default () => playGame(currentGameTutorial, getGameQuestionAndRightAnswer);
+export default () => playGame(gameDescription, getGameInfo);

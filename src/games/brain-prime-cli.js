@@ -1,17 +1,17 @@
 import playGame from '../index.js';
 import getRandomNumber from '../utils.js';
 
-const currentGameTutorial = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-export const getGameQuestionAndRightAnswer = () => {
-  const gameQuestion = getRandomNumber(2, 25);
-  let rightAnswer = 'yes';
-  for (let i = 2; i < gameQuestion; i += 1) {
-    if (gameQuestion % i === 0) {
-      rightAnswer = 'no';
+export const getGameInfo = () => {
+  const question = getRandomNumber(2, 25);
+  let answer = 'yes';
+  for (let i = 2; i < question; i += 1) {
+    if (question % i === 0) {
+      answer = 'no';
     }
   }
-  return [gameQuestion, rightAnswer];
+  return [question, answer];
 };
 
-export default () => playGame(currentGameTutorial, getGameQuestionAndRightAnswer);
+export default () => playGame(gameDescription, getGameInfo);

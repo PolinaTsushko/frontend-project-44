@@ -1,23 +1,23 @@
 import playGame from '../index.js';
 import getRandomNumber from '../utils.js';
 
-const currentGameTutorial = 'Find the greatest common divisor of given numbers.';
+const gameDescription = 'Find the greatest common divisor of given numbers.';
 
-export const getGameQuestionAndRightAnswer = () => {
+export const getGameInfo = () => {
   let firstNumber = getRandomNumber(1, 10);
   let secondNumber = getRandomNumber(1, 10);
 
-  const gameQuestion = `${firstNumber} ${secondNumber}`;
+  const question = `${firstNumber} ${secondNumber}`;
 
-  let rightAnswer;
+  let answer;
   while (firstNumber !== 0 && secondNumber !== 0) {
     if (firstNumber > secondNumber) {
       firstNumber %= secondNumber;
     } else {
       secondNumber %= firstNumber;
     }
-    rightAnswer = String(firstNumber + secondNumber);
-  } return [gameQuestion, rightAnswer];
+    answer = String(firstNumber + secondNumber);
+  } return [question, answer];
 };
 
-export default () => playGame(currentGameTutorial, getGameQuestionAndRightAnswer);
+export default () => playGame(gameDescription, getGameInfo);

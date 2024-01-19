@@ -1,17 +1,17 @@
 import playGame from '../index.js';
 import getRandomNumber from '../utils.js';
 
-const currentGameTutorial = 'Answer "yes" if the number is even, otherwise answer "no".';
+const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-export const getGameQuestionAndRightAnswer = () => {
-  const gameQuestion = getRandomNumber(0, 500);
-  let rightAnswer;
-  if (gameQuestion % 2 === 0) {
-    rightAnswer = 'yes';
-  } if (gameQuestion % 2 !== 0) {
-    rightAnswer = 'no';
+export const getGameInfo = () => {
+  const question = getRandomNumber(0, 500);
+  let answer;
+  if (question % 2 === 0) {
+    answer = 'yes';
+  } if (question % 2 !== 0) {
+    answer = 'no';
   }
-  return [gameQuestion, rightAnswer];
+  return [question, answer];
 };
 
-export default () => playGame(currentGameTutorial, getGameQuestionAndRightAnswer);
+export default () => playGame(gameDescription, getGameInfo);

@@ -1,25 +1,25 @@
 import playGame from '../index.js';
 import getRandomNumber from '../utils.js';
 
-const currentGameTutorial = 'What is the result of the expression?';
+const gameDescription = 'What is the result of the expression?';
 
-const mathSigns = ['+', '-', '*'];
+const MATH_SIGNS = ['+', '-', '*'];
 
-export const getGameQuestionAndRightAnswer = () => {
+export const getGameInfo = () => {
   const firstNumber = getRandomNumber(0, 10);
   const secondNumber = getRandomNumber(0, 10);
-  const mathSign = mathSigns[getRandomNumber(0, mathSigns.length - 1)];
-  const gameQuestion = `${firstNumber} ${mathSign} ${secondNumber}`;
+  const mathSign = MATH_SIGNS[getRandomNumber(0, MATH_SIGNS.length - 1)];
+  const question = `${firstNumber} ${mathSign} ${secondNumber}`;
 
-  let rightAnswer;
+  let answer;
   if (mathSign === '+') {
-    rightAnswer = String(firstNumber + secondNumber);
+    answer = String(firstNumber + secondNumber);
   } if (mathSign === '-') {
-    rightAnswer = String(firstNumber - secondNumber);
+    answer = String(firstNumber - secondNumber);
   } if (mathSign === '*') {
-    rightAnswer = String(firstNumber * secondNumber);
+    answer = String(firstNumber * secondNumber);
   }
-  return [gameQuestion, rightAnswer];
+  return [question, answer];
 };
 
-export default () => playGame(currentGameTutorial, getGameQuestionAndRightAnswer);
+export default () => playGame(gameDescription, getGameInfo);
