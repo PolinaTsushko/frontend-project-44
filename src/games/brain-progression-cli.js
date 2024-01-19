@@ -1,4 +1,5 @@
-import playGame, { getRandomNumber } from '../index.js';
+import playGame from '../index.js';
+import getRandomNumber from '../utils.js';
 
 const currentGameTutorial = 'What number is missing in the progression?';
 
@@ -12,7 +13,6 @@ export const getGameQuestionAndRightAnswer = () => {
     array.push(firstElementOfArray + i * stepOfProgression);
   }
 
-  // const gameQuestion = array.join(' ');
   const hiddenElement = getRandomNumber(0, arrayLength - 1);
   const rightAnswer = String(array[hiddenElement]);
   array[hiddenElement] = '..';

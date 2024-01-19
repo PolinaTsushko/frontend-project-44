@@ -1,8 +1,5 @@
 import readlineSync from 'readline-sync';
 
-const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-export { getRandomNumber };
-
 const roundAmount = 3;
 
 const playGame = (currentGameTutorial, getGameQuestionAndRightAnswer) => {
