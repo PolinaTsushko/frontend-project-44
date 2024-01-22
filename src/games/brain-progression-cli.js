@@ -1,31 +1,31 @@
 import playGame from '../index.js';
-import getRandomNumber from '../utils.js';
+import { getRandomNumber } from '../utils.js';
 
-const gameDescription = 'What number is missing in the progression?';
+const GAME_DESCRIPTION = 'What number is missing in the progression?';
 
 const PROGRESSION_LENGTH = 10;
 const PROGRESSION_STEP = 2;
 
 const generateRandomProgression = () => {
   const firstElementOfProgression = getRandomNumber(1, 5);
-  const arrayOfNumbers = [];
+  const numbers = [];
   const randomElement = getRandomNumber(0, PROGRESSION_LENGTH);
 
   for (let i = 0; i < PROGRESSION_LENGTH; i += 1) {
-    arrayOfNumbers.push(firstElementOfProgression + i * PROGRESSION_STEP);
+    numbers.push(firstElementOfProgression + i * PROGRESSION_STEP);
   }
 
-  return [arrayOfNumbers, randomElement];
+  return [numbers, randomElement];
 };
 
 const getGameInfo = () => {
-  const [arrayOfNumbers, randomElement] = generateRandomProgression();
-  const answer = String(arrayOfNumbers[randomElement]);
-  arrayOfNumbers[randomElement] = '..';
+  const [numbers, randomElement] = generateRandomProgression();
+  const answer = String(numbers[randomElement]);
+  numbers[randomElement] = '..';
 
-  const question = String(arrayOfNumbers.join(' '));
+  const question = String(numbers.join(' '));
 
   return [question, answer];
 };
 
-export default () => playGame(gameDescription, getGameInfo);
+export default () => playGame(GAME_DESCRIPTION, getGameInfo);
