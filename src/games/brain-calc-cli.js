@@ -19,7 +19,6 @@ const getCalculateResult = (first, second, operation) => {
     default:
       throw new Error(`Unexpected sign ${operation}`);
   }
-
 };
 
 const getGameInfo = () => {
