@@ -1,5 +1,5 @@
 import playGame from '../index.js';
-import { getRandomNumber } from '../utils.js';
+import getRandomNumber from '../utils.js';
 
 const GAME_DESCRIPTION = 'What is the result of the expression?';
 
@@ -15,6 +15,9 @@ const getCalculateResult = (first, second, operation) => {
 
     case '*':
       return first * second;
+
+    default:
+      throw new Error(`Unexpected sign ${operation}`);
   }
 
 };
