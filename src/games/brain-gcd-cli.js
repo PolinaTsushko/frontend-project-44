@@ -17,8 +17,8 @@ const getGreatestCommonDivisor = (first, second) => {
 };
 
 const getGameInfo = () => {
-  const firstNumber = getRandomNumber();
-  const secondNumber = getRandomNumber();
+  const firstNumber = getRandomNumber(1);
+  const secondNumber = getRandomNumber(1);
 
   const question = `${firstNumber} ${secondNumber}`;
   const answer = String(getGreatestCommonDivisor(firstNumber, secondNumber));
