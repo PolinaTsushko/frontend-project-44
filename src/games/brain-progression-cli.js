@@ -8,22 +8,22 @@ const PROGRESSION_STEP = 2;
 
 const generateRandomProgression = () => {
   const firstElementOfProgression = getRandomNumber(1, 5);
-  const numbers = [];
+  const sequence = [];
   const randomElement = getRandomNumber(0, PROGRESSION_LENGTH - 1);
 
   for (let i = 0; i < PROGRESSION_LENGTH; i += 1) {
-    numbers.push(firstElementOfProgression + i * PROGRESSION_STEP);
+    sequence.push(firstElementOfProgression + i * PROGRESSION_STEP);
   }
 
-  return [numbers, randomElement];
+  return [sequence, randomElement];
 };
 
 const getGameInfo = () => {
-  const [numbers, randomElement] = generateRandomProgression();
-  const answer = String(numbers[randomElement]);
-  numbers[randomElement] = '..';
+  const [sequence, randomElement] = generateRandomProgression();
+  const answer = String(sequence[randomElement]);
+  sequence[randomElement] = '..';
 
-  const question = String(numbers.join(' '));
+  const question = String(sequence.join(' '));
 
   return [question, answer];
 };

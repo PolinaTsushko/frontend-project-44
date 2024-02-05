@@ -8,15 +8,17 @@ const getGreatestCommonDivisor = (first, second) => {
   while (first !== 0 && second !== 0) {
     if (first > second) {
       first -= second;
-    } else (second -= first);
+    } else {
+      second -= first;
+    }
   }
 
   return first;
 };
 
 const getGameInfo = () => {
-  const firstNumber = getRandomNumber(1, 12);
-  const secondNumber = getRandomNumber(1, 12);
+  const firstNumber = getRandomNumber();
+  const secondNumber = getRandomNumber();
 
   const question = `${firstNumber} ${secondNumber}`;
   const answer = String(getGreatestCommonDivisor(firstNumber, secondNumber));
